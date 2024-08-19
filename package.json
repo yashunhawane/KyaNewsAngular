@@ -8,8 +8,8 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "dev:ssr": "ng run news:serve-ssr",
-    "serve:ssr": "node dist/news/server/main.js",
-    "build:ssr": "ng build && ng run news:server",
+    "build:ssr": "ng build --prod && ng run my-app:server",
+  "serve:ssr": "node dist/news/server/main.js",
     "prerender": "ng run news:prerender"
   },
   "private": true,
