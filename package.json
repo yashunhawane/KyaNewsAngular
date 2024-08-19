@@ -4,11 +4,11 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --prod && ng run KYA_NEWS:server",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "dev:ssr": "ng run news:serve-ssr",
-    "build:ssr": "ng build --prod && ng run my-app:server",
+    "build:ssr": "ng build --prod && ng run KYA_NEWS:server",
   "serve:ssr": "node dist/news/server/main.js",
     "prerender": "ng run news:prerender"
   },
