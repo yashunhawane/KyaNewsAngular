@@ -2,14 +2,11 @@
   "name": "news",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
+    "build": "npm run build:ssr",
+    "build:ssr": "ng build && ng run news:server",
+    "serve:ssr": "node dist/news/server/main.js",
     "start": "ng serve",
-    "build": "ng build --prod && npm run serve:ssr",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
     "dev:ssr": "ng run news:serve-ssr",
-    "build:ssr": "ng build --prod && ng run KYA_NEWS:server",
-  "serve:ssr": "node dist/news/server/main.js",
     "prerender": "ng run news:prerender"
   },
   "private": true,
